@@ -37,8 +37,39 @@
       const input = document.querySelector("input");
       const button = document.querySelector("button");
 
+      //Create a function that will run in response to the button being clicked.
+      const addGroceryItem = function(){
 
+        //Saving Input Text and Resetting Input
+        const inputText = input.value;
+        input.value = "";
 
+        //Creating new list item and button
+        const newListItem = document.createElement("li");
+        const newSpan = document.createElement("span");
+        const newButton = document.createElement("button");
+
+        //Appending children to newListItem parent node
+        newListItem.append(newSpan, newButton);
+
+        //Setting span to initial input text and adding "Delete" to button
+        newSpan.textContent = inputText;
+        newButton.textContent = "Delete";
+
+        //Adding event handler so "Delete" button works
+        newButton.addEventListener("click", () => {
+          newListItem.remove();
+        });
+
+        //Adding li as child of ul 
+        list.append(newListItem);
+
+        //Focusing input
+        input.focus();
+      }
+
+      //Adding event listener for Add item
+      button.addEventListener("click", addGroceryItem);
 
     </script>
   </body>
