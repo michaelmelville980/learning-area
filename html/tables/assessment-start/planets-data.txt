@@ -12,7 +12,8 @@ Jovian planets
 Gas giants
 
 Jupiter 1898 142,984 1326 23.1 9.9 778.6 -110 67 The largest planet
-Saturn 568 120,536 687 9.0 10.7 1433.5 -140 62
+
+
 
 Ice giants
 
